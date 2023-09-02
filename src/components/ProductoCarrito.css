@@ -1,3 +1,18 @@
 .textoProducto{
     color: black
 }
+
+
+.title1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.title11{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

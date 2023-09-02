@@ -1,17 +1,27 @@
-/* ProductPage.css */
+.col-md-6{
+    margin-bottom: 20px;
 
-.container {
-    background-color: #f5f5f5;
-    padding: 50px;
-    border-radius: 10px;
 }
 
-.btn-outline-secondary {
-    border-color: #d4d4d4;
-    color: #d4d4d4;
+.elementos{
+    margin-top:10px; /* Ajusta el valor según el espacio deseado */
+
 }
 
-.btn-outline-secondary:hover {
-    background-color: #d4d4d4;
-    color: #f5f5f5;
+
+.title3{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
 }
+
+
+.title2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: grey;
+    margin-right: 20px;
+    text-justify: auto;
+}
+
+
+

@@ -1,9 +1,16 @@
 .nav-link {
     color: #ffffff;
     text-decoration: none;
-    font-family: 'lato', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     margin: 0 10px;
     font-weight: 300;
   }
+
+
+
+.navbar navbar-expand-lg navbar-dark bg-dark {
+
+    background-color: #161D25;
+}
 

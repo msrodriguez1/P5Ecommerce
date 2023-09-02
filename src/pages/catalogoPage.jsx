@@ -46,6 +46,8 @@ export const CatalogoPage = () => {
 
     <div>
     <h5 className="titulo">Catálogo de productos</h5>
+    <img className="moai" src="src/assets/portada9.jpeg"   style={{ display: 'block', margin: 'auto', maxWidth: '800px', objectFit: 'cover', marginBottom: '30px'}}
+></img>
     <div className="row mb-4">
         <div className="col-12 col-md-4">
             <select
@@ -75,10 +77,21 @@ export const CatalogoPage = () => {
                     </Link>
                     <div className="card-body text-center">
                         <h5 className="card-title">{producto.nombre}</h5>
-                        <p className="card-text">{producto.descripcion}</p>
+                        {/* <p className="card-text">{producto.descripcion}</p> */}
                         <p className="card-text">{producto.precio} {producto.moneda}</p>
-                        <button className="btn btn-outline-secondary" onClick={() => addToCart(producto)}>Añadir al carrito</button>
-                    </div>
+                        <button
+  className="btn btn-secondary" // Cambia la clase a "btn btn-secondary"
+  onClick={() => addToCart(producto)}
+  style={{ borderRadius: '0',
+  height: '30px',
+  lineHeight: '20px',
+  background: 'black',
+  color: 'white',
+  fontFamily: 'Courier New, Courier',
+  fontSize: '13px' }}
+>
+  Añadir al carrito
+</button>                    </div>
                 </div>
             </div>
         ))}

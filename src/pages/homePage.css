@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 10px;
   }
   
   .moai {
@@ -16,7 +17,10 @@
 
   .title {
     font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
     margin-top: 10px;
+    margin-bottom: 10px;
+
   }
   
 
@@ -24,7 +28,12 @@
   
   .title1 {
     font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 30px;
+
+
+
   }
   
 

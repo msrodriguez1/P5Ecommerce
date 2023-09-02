@@ -4,7 +4,7 @@ import { CartContext } from '../context/carritoContexto.jsx';
 import ProductoCarrito from '../components/ProductoCarrito.jsx';
 import { useNavigate } from 'react-router-dom';
 import Atras from '../components/BotonAtras.jsx'
-// import './carritoPage.css'
+import './carritoPage.css'
 
 const CarritoPage = () => {
   const navigate= useNavigate();
@@ -25,7 +25,8 @@ const CarritoPage = () => {
 
 return (
     <div style={{ minHeight: 'calc(100vh - 100px)' }}>
-      <Container className="mt-5">
+          <h5 className="title1">Carrito</h5>
+      <Container className="mt-5 custom-container">
         {cart.map((producto, index) => (
           <ProductoCarrito 
             key={index} 
@@ -34,10 +35,12 @@ return (
           />
         ))}
       </Container>
-      <div>
-          <h3 className="mb-4">Precio total: {totalPrice}</h3>
-          <button className="btn btn-outline-secondary mb-4" onClick={() => navigate('/checkout')}>Pagar</button>
-      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <h5 className="title1">Precio total: {totalPrice} EUR</h5>
+    <button className="btn btn-outline-secondary mb-4" onClick={() => navigate('/checkout')}>Pagar</button>
+</div>
+
+
       <Atras />
     </div>
   );

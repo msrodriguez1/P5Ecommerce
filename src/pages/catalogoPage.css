@@ -4,7 +4,26 @@
     margin-bottom: 20px;
     display: flex;
     text-align: center;
+    align-items: center;
+    margin-left: 10px;
 
 }
 
 
+.moai{
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.card-title{
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card-text{
+    font-family: 'Courier New', Courier, monospace;
+
+    
+}

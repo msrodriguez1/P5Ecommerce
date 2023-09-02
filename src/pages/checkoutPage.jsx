@@ -17,7 +17,7 @@ const Checkout = () => {
 return (
     <div className="container mt-5">
       <form onSubmit={handleSubmit} className="p-5 bg-light rounded">
-        <h1 className="mb-4">Checkout</h1>
+        <h1 className="mb-4 title1">Checkout</h1>
         <div className="form-group mb-3">
           <label>Forma de entrega</label>
           <div>

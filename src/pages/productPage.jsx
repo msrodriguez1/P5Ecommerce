@@ -3,10 +3,7 @@ import React, { useState, useEffect,useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../context/carritoContexto';
 import Atras from '../components/BotonAtras.jsx'
-// import './productPage.css'
-
-import '../assets/perfume1.jpeg'
-
+import './productPage.css'
 
 export const ProductPage = () => {
   const { addToCart } = useContext(CartContext);
@@ -47,21 +44,34 @@ export const ProductPage = () => {
 // ...
 
 return (
-<div className="container mt-5">
+  <div>
+<div className="container-fluid mt-5">
     <div className="row">
         <div className="col-md-6 mb-4">
-        <img src={producto.imagen} alt={producto.nombre} className="img-fluid" style={{ width: '300px', maxHeight: '300px', objectFit: 'cover' }} />
+        <img className="moai" src={producto.imagen} alt={producto.nombre}  style={{ width: '100px', maxHeight: '300px', objectFit: 'cover' }} ></img>
         </div>
         <div className="col-md-6">
-            <h1>{producto.nombre}</h1>
-            <p className="text-justify">{producto.descripcion}</p>
-            <p className="font-weight-bold">{producto.precio} {producto.moneda}</p>
-            <button className="btn btn-outline-secondary btn-block mb-4" onClick={() => addToCart(producto)}>Añadir al carrito</button>
-        </div>
+            <h1 className="title3">{producto.nombre}</h1>
+            <p className="title2">{producto.descripcion}</p>
+            <p className="font-weight-bold elementos">{producto.precio} {producto.moneda}</p>
+            <button
+  className="btn btn-secondary" // Cambia la clase a "btn btn-secondary"
+  onClick={() => addToCart(producto)}
+  style={{ borderRadius: '0',
+  height: '30px',
+  lineHeight: '20px',
+  background: 'black',
+  color: 'white',
+  fontFamily: 'Courier New, Courier',
+  fontSize: '13px' }}
+>
+  Añadir al carrito
+</button>          </div>
     </div>
-    <Atras/>
-</div>
 
+</div>
+    <Atras/>
+    </div>
 );
 
 // ...
