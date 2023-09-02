@@ -1,0 +1,26 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Camiseta",
+        "descripcion": "Camiseta de algodón de alta calidad",
+        "precio": 15,
+        "moneda": "EUR",
+        "cantidadEnStock": 100,
+        "categoria": "Ropa",
+        "imagen": "url_de_la_imagen",
+        "cantidad": 1
+      },
+      {
+        "id": 2,
+        "nombre": "Pantalones",
+        "descripcion": "Pantalones de mezclilla",
+        "precio": 30,
+        "moneda": "EUR",
+        "cantidadEnStock": 50,
+        "categoria": "Ropa",
+        "imagen": "url_de_la_imagen",
+        "cantidad": 1
+      }
+    ]
+  }

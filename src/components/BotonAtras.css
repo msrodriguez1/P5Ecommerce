@@ -1,0 +1,11 @@
+/* Atras.css */
+
+.btn-outline-secondary {
+    border-color: #d4d4d4;
+    color: #d4d4d4;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #d4d4d4;
+    color: #f5f5f5;
+}

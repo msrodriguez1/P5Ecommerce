@@ -1,0 +1,37 @@
+.product-carousel .slick-slide {
+  padding: 10px; /* Ajusta el padding */
+}
+
+.product-carousel .product-card {
+  padding: 10px; /* Ajusta el padding */
+  text-align: center;
+}
+
+.product-carousel .product-card h3 {
+  font-size: 1.2em; /* Ajusta el tamaño de la fuente */
+}
+
+.product-carousel .product-card img {
+  width: 100%; /* Ajusta el ancho */
+  height: auto; /* Mantén la proporción */
+  max-width: 200px; /* Ajusta el ancho máximo */
+  margin: 0 auto; /* Centra la imagen */
+}
+
+
+.product-carousel .product-card button {
+  padding: 10px 20px; /* Ajusta el padding */
+  font-size: 0.8em; /* Ajusta el tamaño de la fuente */
+  background-color: #333; /* Ajusta el color de fondo */
+  color: white; /* Ajusta el color del texto */
+  border: none; /* Elimina el borde */
+  border-radius: 5px; /* Ajusta el radio del borde */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  height: 30px;
+  text-align: center;
+}
+
+.product-carousel .product-card button:hover {
+  background-color: #555; /* Ajusta el color de fondo al pasar el ratón */
+}
+

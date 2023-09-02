@@ -1,0 +1,50 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "usuario":"user1@ucp.pe",
+        "password":"pass1",
+        "nombre":"Maria",
+        "apellido":"Rodriguez",
+        "direccion":"El tintoretto 795",
+        "imagen":"nada aun"
+      },
+      {
+        "id": 2,
+        "usuario":"user2@ucp.pe",
+        "password":"pass2",
+        "nombre":"Toli",
+        "apellido":"Alliende",
+        "direccion":"Aviador Acevedo 12342",
+        "imagen":"nada aun"
+      },
+      {
+        "id": 3,
+        "usuario":"user3@ucp.pe",
+        "password":"pass3",
+        "nombre":"Amor",
+        "apellido":"Misericordioso",
+        "direccion":"Granada 1232",
+        "imagen":"nada aun"
+      },
+      {
+        "id": 4,
+        "usuario":"user4@ucp.pe",
+        "password":"pass4",
+        "nombre":"Helena",
+        "apellido":"Cruchaga",
+        "direccion":"San Vicente 1243",
+        "imagen":"Nada aun"
+      },
+      {
+        "id": 5,
+        "usuario":"user5@ucp.pe",
+        "password":"pass5",
+        "nombre": "Vida",
+        "apellido":"Mar",
+        "direccion":"Avenida Comercio",
+        "imagen":"nada aun"
+      }
+
+    ]
+  }

@@ -1,0 +1,41 @@
+/* Estilos globales del formulario */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Estilos de los elementos del formulario */
+form div {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo de los botones */
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Estilo de los botones al pasar el ratón */
+form button:hover {
+    background: #555;
+}

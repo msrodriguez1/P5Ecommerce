@@ -1,0 +1,70 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Camiseta",
+      "descripcion": "Camiseta de algodón de alta calidad",
+      "precio": 15,
+      "moneda": "EUR",
+      "cantidadEnStock": 100,
+      "categoria": "Ropa",
+      "imagen": "url_de_la_imagen",
+      "cantidad": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Pantalones",
+      "descripcion": "Pantalones de mezclilla",
+      "precio": 30,
+      "moneda": "EUR",
+      "cantidadEnStock": 50,
+      "categoria": "Ropa",
+      "imagen": "url_de_la_imagen",
+      "cantidad": 1
+    },
+    {
+      "id": 3,
+      "nombre": "Zapatillas",
+      "descripcion": "Zapatillas deportivas",
+      "precio": 50,
+      "moneda": "EUR",
+      "cantidadEnStock": 200,
+      "categoria": "Calzado",
+      "imagen": "url_de_la_imagen",
+      "cantidad": 1
+    },
+    {
+      "id": 4,
+      "nombre": "Gorra",
+      "descripcion": "Gorra de béisbol",
+      "precio": 20,
+      "moneda": "EUR",
+      "cantidadEnStock": 80,
+      "categoria": "Accesorios",
+      "imagen": "url_de_la_imagen",
+      "cantidad": 1
+    },
+    {
+      "id": 5,
+      "nombre": "Mochila",
+      "descripcion": "Mochila de viaje",
+      "precio": 40,
+      "moneda": "EUR",
+      "cantidadEnStock": 120,
+      "categoria": "Accesorios",
+      "imagen": "url_de_la_imagen",
+      "cantidad": 1
+    },
+    {
+      "id": 6,
+      "nombre": "Chaqueta",
+      "descripcion": "Chaqueta de invierno",
+      "precio": 70,
+      "moneda": "EUR",
+      "cantidadEnStock": 60,
+      "categoria": "Ropa",
+      "imagen": "url_de_la_imagen",
+      "cantidad": 1
+    }
+  ]
+}

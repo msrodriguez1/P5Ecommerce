@@ -1,0 +1,196 @@
+.formulario{
+
+margin-left: 200px;
+align-items: center;
+margin-bottom: 50px;
+
+}
+
+.titulo{
+    margin-left: 200px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+.InputsVarios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.form-control{
+    width:50px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+
+.modalReserva{
+
+    margin-top: 50px;
+    margin-bottom:50px;
+}
+
+
+.tablaReservas{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 200px;
+}
+
+
+.tablacuerpo{
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+}
+
+
+.tablaencabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+}
+
+
+.filaTabla{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
+.cells{
+    width: 180px;
+}
+
+.cells1{
+    width: 250px;
+}
+
+
+.atun{
+   width: 300px;
+   /* margin-left: 340px; */
+}
+
+
+.flores{
+    width:150px;
+    transform: rotate(90deg);
+    margin-left: 20px;
+    filter: contrast(150%); 
+}
+
+.langosta{
+    width:280px;
+    transform: rotate(90deg);
+    margin-left: 20px;
+    filter: contrast(150%); 
+}
+
+.moai{
+    width: 300px;
+
+}
+
+.ostra{
+    width:300px;
+    margin-left: 20px;
+    filter: contrast(150%); 
+}
+.alga{
+    width:200px;  
+    margin-left: 20px; 
+    filter: contrast(150%);  
+}
+.tropical{
+    display: flex;
+    flex-direction:column;
+    margin-left: 40px;
+}
+
+.anakena{
+    font-size: 70px;
+}
+
+
+.anakena2{
+    margin-top: 15px;
+    font-size: 35px;
+    color: rgb(132, 132, 132);
+
+}
+
+.tituloInspiraciones{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+
+.tituloCarta{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    color: rgb(94, 93, 93);
+
+}
+
+.text-center{
+    width:500px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.carta{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cartaTexto{
+    width: 350px;
+    /* margin-left: 480px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    background-color:  rgb(244, 244, 244);
+border-radius: 5px;
+color: rgb(94, 93, 93);}
+
+
+.mainPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+
+.navbar navbar-expand-sm navbar-dark bg-dark{
+    height: 100px;
+}
+
+.inspo{
+    color: rgb(94, 93, 93);}

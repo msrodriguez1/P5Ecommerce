@@ -1,0 +1,22 @@
+/* PerfilPage.css */
+
+.container {
+    background-color: #f5f5f5;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.perfil {
+    color: #d4d4d4;
+}
+
+.perfil img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #d4d4d4;
+    margin-top: 20px;
+}
+
+.historialCompras {
+    color: #d4d4d4;
+}
