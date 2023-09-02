@@ -1,0 +1,10 @@
+/* Define los estilos personalizados para el toast */
+.mi-toast-custom {
+    background-color: #000000; /* Cambia el color de fondo */
+    color: #ffffff; /* Cambia el color del texto */
+    border-radius: 0px; /* Cambia el radio de los bordes */
+    height:15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    /* Agrega más estilos según sea necesario */
+  }

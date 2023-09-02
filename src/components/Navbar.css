@@ -1,16 +1,25 @@
 .nav-link {
-    color: #ffffff;
+    color:  #161D25;
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     margin: 0 10px;
     font-weight: 300;
+
   }
 
 
 
-.navbar navbar-expand-lg navbar-dark bg-dark {
+.navbar navbar-expand-lg{
 
-    background-color: #161D25;
+    background-color: #ffffff;
+    border-bottom: 2px solid #4e4e4e; /* Cambia el color y el grosor según tus preferencias */
+
+}
+
+
+.logo{
+
+    height: 40px;
 }
 

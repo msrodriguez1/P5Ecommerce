@@ -37,8 +37,17 @@ return (
       </Container>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <h5 className="title1">Precio total: {totalPrice} EUR</h5>
-    <button className="btn btn-outline-secondary mb-4" onClick={() => navigate('/checkout')}>Pagar</button>
+    
 </div>
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <button className="btn btn-outline-secondary mb-4" onClick={() => navigate('/checkout')} style={{ borderRadius: '0',
+  height: '40px',
+  lineHeight: '30px',
+  background: 'black',
+  color: 'white',
+  fontFamily: 'Courier New, Courier',
+  fontSize: '18px' }}>continuar</button>
+    </div>
 
 
       <Atras />

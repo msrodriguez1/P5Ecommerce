@@ -1,5 +1,7 @@
 import React, { createContext, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Asegúrate de importar los estilos de react-toastify
+import './carritoContexto.css'
 
 
 const CartContext = createContext();
@@ -14,7 +16,9 @@ const CartProvider = ({ children }) => {
   const addToCart = (producto) => {
     setCart([...cart, producto]);
     setTotalPrice(totalPrice + (producto.precio * producto.cantidad));
-    toast('Producto añadido al carrito!');
+    toast('Producto añadido al carrito!',{
+      className: 'mi-toast-custom', // Agrega una clase CSS personalizada para aplicar estilos
+    });
 
   };
 
@@ -39,7 +43,9 @@ const CartProvider = ({ children }) => {
     // Actualizar el precio total
     const newTotalPrice = nuevoCarrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
     setTotalPrice(newTotalPrice);
-    toast('Producto eliminado del carrito!');
+    toast('Producto eliminado del carrito!',{
+      className: 'mi-toast-custom', // Agrega una clase CSS personalizada para aplicar estilos
+    });
   }
 
   return (

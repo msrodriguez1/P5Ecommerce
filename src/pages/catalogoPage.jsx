@@ -30,30 +30,31 @@ export const CatalogoPage = () => {
 
 
 
-  const filtrarProductos = () => {
-    if (categoriaSeleccionada === "") {
-      setProductosFiltrados(productos);
-    } else {
-      setProductosFiltrados(
-        productos.filter((producto) => producto.categoria === categoriaSeleccionada)
-      );
-    }
-  };
+const filtrarProductos = (value) => {
+  setCategoriaSeleccionada(value);
+  if (value === "") {
+    setProductosFiltrados(productos);
+  } else {
+    setProductosFiltrados(
+      productos.filter((producto) => producto.categoria === value)
+    );
+  }
+};
   
 
   // ...
   return (
 
     <div>
-    <h5 className="titulo">Catálogo de productos</h5>
+    {/* <h5 className="titulo">Catálogo de productos</h5> */}
     <img className="moai" src="src/assets/portada9.jpeg"   style={{ display: 'block', margin: 'auto', maxWidth: '800px', objectFit: 'cover', marginBottom: '30px'}}
 ></img>
     <div className="row mb-4">
         <div className="col-12 col-md-4">
             <select
-                className="form-control"
+                className="my-select"
                 value={categoriaSeleccionada}
-                onChange={(e) => setCategoriaSeleccionada(e.target.value)}
+                onChange={(e) => filtrarProductos(e.target.value)}
             >
                 <option value="">Todas las categorías</option>
                 <option value="Floral">Floral</option>
@@ -62,11 +63,11 @@ export const CatalogoPage = () => {
                 {/* Agrega aquí más categorías si las tienes */}
             </select>
         </div>
-        <div className="col-12 col-md-2">
+        {/* <div className="col-12 col-md-2">
             <button className="btn btn-outline-secondary" onClick={filtrarProductos}>
                 Filtrar
             </button>
-        </div>
+        </div> */}
     </div>
     <div className="row">
         {productosFiltrados.map(producto => (

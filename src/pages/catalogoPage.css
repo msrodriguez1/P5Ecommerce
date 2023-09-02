@@ -9,13 +9,11 @@
 
 }
 
-
 .moai{
 
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
 
 .card-title{
 
@@ -23,7 +21,37 @@
 }
 
 .card-text{
-    font-family: 'Courier New', Courier, monospace;
-
-    
+    font-family: 'Courier New', Courier, monospace;  
 }
+
+
+.row{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.col-md-4 mb-4{
+    border-radius:0;
+
+}
+.card{
+    border-radius:0;
+}
+
+
+.my-select{
+    font-family: 'Courier New', Courier, monospace;
+    /* Cambia la tipografía según tu elección */
+
+}
+
+
+
+.my-select option:checked {
+    color: gray; /* Cambia el color de las opciones seleccionadas */
+  }
+
+
+  .my-select.custom-select option:hover {
+    background-color: lightgray; /* Cambia el color de fondo al pasar el mouse */
+    color: gray; /* Cambia el color del texto al pasar el mouse */
+  }
