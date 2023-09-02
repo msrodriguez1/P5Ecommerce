@@ -17,7 +17,7 @@ export const SubCatalogo  =()=> {
   useEffect(() => {
     // Cargar los productos desde el archivo JSON cuando el componente se monta
     const cargarProductos = async () => {
-      const respuesta = await fetch('catalogo.json');
+      const respuesta = await fetch('subcatalogo.json');
       const datos = await respuesta.json();
       setProductos(datos.productos);
     };
@@ -52,12 +52,12 @@ export const SubCatalogo  =()=> {
             <Slider {...settings}>
               {productos.map((product) => (
                 <div key={product.id} className="product-card">
-                  <h3>{product.nombre}</h3>
-                  <Link to={`/producto/${product.id}`}>
+                  {/* <h3>{product.nombre}</h3> */}
+                  <Link to={`/catalogo`}>
                   <img src={product.imagen} alt={product.nombre}/>
                   </Link>
 
-                  <button onClick={() => addToCart(product)}>Añadir al carrito</button>
+                  {/* <button onClick={() => addToCart(product)}>Añadir al carrito</button> */}
                 </div>
               ))}
             </Slider>

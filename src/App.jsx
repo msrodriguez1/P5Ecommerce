@@ -40,7 +40,7 @@ function App() {
       <NavBar />
         <MainRouter />
       <ToastContainer />
-      <SubCatalogo products={products} />
+      {/* <SubCatalogo products={products} /> */}
       <Footer />
 
       </CartProvider>

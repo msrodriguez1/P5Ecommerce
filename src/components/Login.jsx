@@ -81,10 +81,10 @@ const Login = () => {
                 <input type="password" className="form-control" value={password} onChange={handlePasswordChange} required />
               </div>
               <div className="botones">
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-secondary">
                 Iniciar sesión
               </button>
-              <button onClick={handleMostrarRegistro} className="btn btn-primary">Registrarse</button>
+              <button onClick={handleMostrarRegistro} className="btn btn-secondary">Registrarse</button>
               </div>
             </form>
           </div>

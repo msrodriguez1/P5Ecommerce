@@ -5,10 +5,16 @@ import cors from 'cors';
 app.use(cors())
 
 import Producto from './producto.js'
+import Compra from './compras.js'
+
 import connectDB from './db.js'
 import { obtenerProductos } from './controllers/Producto.controller.js';
+import { obtenerCompras } from './controllers/Compras.controller.js';
+
 
 app.get("/obtener-productos", obtenerProductos);
+app.get("/obtener-compras", obtenerCompras);
+
 // 2. MIDDLEWARES
 
 //VARIABLES DE ENTORNO

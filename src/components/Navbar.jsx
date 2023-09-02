@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { PerfilContext } from '../context/perfilContexto';
 import { useNavigate } from 'react-router-dom';
-// import './Navbar.css'
+import './Navbar.css'
 
 
 

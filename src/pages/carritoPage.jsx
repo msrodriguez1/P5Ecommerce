@@ -24,26 +24,24 @@ const CarritoPage = () => {
 // ...
 
 return (
-  <div>
-  <Container className="mt-5">
-    {cart.map((producto, index) => (
-      <ProductoCarrito 
-        key={index} 
-        producto={producto} 
-        actualizarCantidad={actualizarCantidad}
-      />
-    ))}
-   
-  </Container>
-  <div>
-      <h3 className="mb-4">Precio total: {totalPrice}</h3>
-      <button className="btn btn-outline-secondary btn-block mb-4" onClick={() => navigate('/checkout')}>Pagar</button>
+    <div style={{ minHeight: 'calc(100vh - 100px)' }}>
+      <Container className="mt-5">
+        {cart.map((producto, index) => (
+          <ProductoCarrito 
+            key={index} 
+            producto={producto} 
+            actualizarCantidad={actualizarCantidad}
+          />
+        ))}
+      </Container>
+      <div>
+          <h3 className="mb-4">Precio total: {totalPrice}</h3>
+          <button className="btn btn-outline-secondary mb-4" onClick={() => navigate('/checkout')}>Pagar</button>
+      </div>
       <Atras />
-
-      </div>
-
-      </div>
-);
+    </div>
+  );
+  
 
 // ...
 

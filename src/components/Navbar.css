@@ -1,41 +1,9 @@
-/* Estilos generales para la barra de navegación */
-nav {
-    width: 100%;
-    background-color: #333;
-    padding: 10px 0;
-}
-
-/* Estilos para los elementos de la barra de navegación */
-.navbar-nav {
-    display: flex;
-    justify-content: space-around;
-}
-
-/* Estilos para los enlaces */
-.nav-item {
-    list-style-type: none;
-}
-
 .nav-link {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    padding: 5px 10px;
-}
-
-.nav-link:hover {
-    background-color: #555;
-}
-
-/* Estilo para el botón */
-button {
-    background-color: #555;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #777;
-}
+    font-family: 'lato', sans-serif;
+    font-size: 18px;
+    margin: 0 10px;
+    font-weight: 300;
+  }
 

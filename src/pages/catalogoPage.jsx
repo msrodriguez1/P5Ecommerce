@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/carritoContexto';
 import Atras from '../components/BotonAtras.jsx'
-// import './catalogoPage.css'
+import './catalogoPage.css'
 
 
 
@@ -43,42 +43,50 @@ export const CatalogoPage = () => {
 
   // ...
   return (
-    <div >
-        <h1 className="text-center mb-5">Catálogo de productos</h1>
-        <div className="row">
-            <div className="col-12 mb-4">
-                <select
-                    className="form-control"
-                    value={categoriaSeleccionada}
-                    onChange={(e) => setCategoriaSeleccionada(e.target.value)}
-                >
-                    <option value="">Todas las categorías</option>
-                    <option value="Ropa">Ropa</option>
-                    <option value="Calzado">Calzado</option>
-                    {/* Agrega aquí más categorías si las tienes */}
-                </select>
-                <button className="btn btn-primary mt-2" onClick={filtrarProductos}>
-                    Filtrar
-                </button>
-            </div>
-            {productosFiltrados.map(producto => (
-                <div key={producto.id} className="col-12 mb-4">
-                    <div className="card">
-                        <Link to={`/producto/${producto.id}`}>
-                            <img src={producto.imagen} alt={producto.nombre} className="card-img-top" />
-                        </Link>
-                        <div className="card-body">
-                            <h5 className="card-title">{producto.nombre}</h5>
-                            <p className="card-text">{producto.descripcion}</p>
-                            <p className="card-text">{producto.precio} {producto.moneda}</p>
-                            <button className="btn btn-outline-secondary btn-block" onClick={() => addToCart(producto)}>Añadir al carrito</button>
-                        </div>
+
+    <div>
+    <h5 className="titulo">Catálogo de productos</h5>
+    <div className="row mb-4">
+        <div className="col-12 col-md-4">
+            <select
+                className="form-control"
+                value={categoriaSeleccionada}
+                onChange={(e) => setCategoriaSeleccionada(e.target.value)}
+            >
+                <option value="">Todas las categorías</option>
+                <option value="Floral">Floral</option>
+                <option value="Maderas">Maderas</option>
+                <option value="Citricos">Citricos</option>
+                {/* Agrega aquí más categorías si las tienes */}
+            </select>
+        </div>
+        <div className="col-12 col-md-2">
+            <button className="btn btn-outline-secondary" onClick={filtrarProductos}>
+                Filtrar
+            </button>
+        </div>
+    </div>
+    <div className="row">
+        {productosFiltrados.map(producto => (
+            <div key={producto.id} className="col-md-4 mb-4">
+                <div className="card">
+                    <Link to={`/producto/${producto.id}`}>
+                        <img src={producto.imagen} alt={producto.nombre} className="card-img-top mx-auto d-block" style={{ width: '300px', maxHeight: '300px', objectFit: 'cover' }} />
+                    </Link>
+                    <div className="card-body text-center">
+                        <h5 className="card-title">{producto.nombre}</h5>
+                        <p className="card-text">{producto.descripcion}</p>
+                        <p className="card-text">{producto.precio} {producto.moneda}</p>
+                        <button className="btn btn-outline-secondary" onClick={() => addToCart(producto)}>Añadir al carrito</button>
                     </div>
                 </div>
-            ))}
-        </div>
-        <Atras />
+            </div>
+        ))}
     </div>
+    <Atras />
+</div>
+
+
 )
 
   

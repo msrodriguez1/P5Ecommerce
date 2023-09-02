@@ -1,9 +1,20 @@
+import './homePage.css'
+
+import {Link} from 'react-router-dom'
+
 
 export const HomePage = () => {
   return (
     <div className="mainPage">              
-    <h1 className="anakena">ANAKENA</h1>
-    <img className="moai" src="src/assets/moai.jpeg" ></img>
-      <h4 className="anakena2">RESTAURANT</h4></div>
+    <h4 className="title1">LE LABO</h4>
+
+<Link to={`/catalogo`}>
+  
+    <img className="moai" src="src/assets/portada2.jpeg" ></img>
+    </Link>
+    <h6 className="title">perfumería artesanal</h6>
+      </div>
   )
 }
+
+
