@@ -25,7 +25,7 @@ const CarritoPage = () => {
 
 return (
     <div style={{ minHeight: 'calc(100vh - 100px)' }}>
-          <h5 className="title1">Carrito</h5>
+          {/* <h5 className="title1">Carrito</h5> */}
       <Container className="mt-5 custom-container">
         {cart.map((producto, index) => (
           <ProductoCarrito 

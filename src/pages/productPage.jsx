@@ -4,8 +4,15 @@ import { useParams } from 'react-router-dom';
 import { CartContext } from '../context/carritoContexto';
 import Atras from '../components/BotonAtras.jsx'
 import './productPage.css'
+import perfume1 from '../assets/perfume1.jpeg';
+import perfume2 from '../assets/perfume2.jpeg';
+import perfume3 from '../assets/perfume3.jpeg';
+import perfume4 from '../assets/perfume4.jpeg';
+import perfume5 from '../assets/perfume5.jpeg';
+import perfume6 from '../assets/perfume6.jpeg';
 
 export const ProductPage = () => {
+
   const { addToCart } = useContext(CartContext);
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
@@ -20,6 +27,7 @@ export const ProductPage = () => {
         }
         const datos = await respuesta.json();
         const producto = datos.productos.find(p => p.id === parseInt(id));
+
         if (!producto) {
           throw new Error('Producto no encontrado');
         }
@@ -42,13 +50,26 @@ export const ProductPage = () => {
   }
 
 // ...
-
 return (
   <div>
 <div className="container-fluid mt-5">
     <div className="row">
         <div className="col-md-6 mb-4">
-        <img className="moai" src={producto.imagen} alt={producto.nombre}  style={{ width: '100px', maxHeight: '300px', objectFit: 'cover' }} ></img>
+        <img  src={
+    producto.id === 1
+      ? perfume1
+      : producto.id === 2
+      ? perfume2
+      : producto.id === 3
+      ? perfume3
+      : producto.id === 4
+      ? perfume4
+      : producto.id === 5
+      ? perfume5
+      : producto.id === 6
+      ? perfume6
+      : ''
+  }  style={{ width: '450px', maxHeight: '450px', objectFit: 'cover' }}/>
         </div>
         <div className="col-md-6">
             <h1 className="title3">{producto.nombre}</h1>
