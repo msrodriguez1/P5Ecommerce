@@ -1,6 +1,6 @@
-import Compra from '../compras.js';
+const Compra =require('../compras.js') ;
 
-export const obtenerCompras = async (req, res) => {
+const obtenerCompras = async (req, res) => {
     try {
         const compras = await Compra.find({});
         res.json({ compras });
@@ -12,3 +12,8 @@ export const obtenerCompras = async (req, res) => {
         });
     }
 };
+
+module.exports = {
+    obtenerCompras
+  };
+

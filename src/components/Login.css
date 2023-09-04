@@ -1,6 +1,7 @@
 .botones {
-    width: 400px;
+    width: 600px;
     display: flex;
+    gap:10px;
 flex-direction:row;
-justify-content: space-evenly;}
+justify-content: space-between;}
   

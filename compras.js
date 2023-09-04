@@ -1,5 +1,5 @@
 // 1. IMPORTACIONES
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const compraSchema = new mongoose.Schema({
   idcompra: { type: Number, required: true },
@@ -11,4 +11,4 @@ const compraSchema = new mongoose.Schema({
 
 const Compra = mongoose.model('Compra', compraSchema);
 
-export default Compra;
+module.exports =  Compra;

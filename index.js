@@ -1,24 +1,30 @@
 // 1. IMPORTACIONES
-import express from 'express';
+const express =require('express') ;
 const app           = express() ;    
-import cors from 'cors';
+const cors =require('cors');
+const  bcryptjs  =require( 'bcryptjs');
+const  jwt  =require( 'jsonwebtoken');
 app.use(cors())
 
-import Producto from './producto.js'
-import Compra from './compras.js'
+const Producto =require( './producto.js');
+const Usuario =require('./usuario.js');
+const Compra =require( './compras.js');
 
-import connectDB from './db.js'
-import { obtenerProductos } from './controllers/Producto.controller.js';
-import { obtenerCompras } from './controllers/Compras.controller.js';
+const connectDB =require( './db.js');
+const{ obtenerProductos } =require( './controllers/Producto.controller.js');
+const { obtenerCompras } =require(  './controllers/Compras.controller.js');
+const {crearUsuario, iniciarSesion, verificarUsuario}=require('./controllers/Usuario.controller.js')
 
+// index.js u otro archivo
 
-app.get("/obtener-productos", obtenerProductos);
-app.get("/obtener-compras", obtenerCompras);
+const auth= require('./authorization.js');
+// ...
+
 
 // 2. MIDDLEWARES
 
 //VARIABLES DE ENTORNO
-import  {config}  from 'dotenv';
+const  {config}  =require('dotenv');
 config();
 
 try {
@@ -34,61 +40,15 @@ try {
 app.use(express.json());
 
 // 3. RUTEO
-
 app.get("/obtener-productos", obtenerProductos);
+// app.post("/crear-productos", crearProducto);
+// app.put("/actualizar-productos", actualizarProducto);
+// app.delete("/borrar-productos", borrarProducto);
+app.post("/usuario/crear", crearUsuario);
+app.post("/usuario/iniciar-sesion", iniciarSesion);
+app.post("/usuario/verificar-usuario", auth, verificarUsuario);
 
-
-
-app.post("/crear-producto", async(req, res) => {  
-    const { id,producto,marca,coleccion,categoria,color,talla,material,imagen,stock} = req.body
-
-    try {
-        const nuevoProducto = await Producto.create({ id,producto,marca,coleccion,categoria,color,talla,material,imagen,stock })
-
-        res.json(nuevoProducto)
-
-    } catch (error) {
-        res.status(500).json({
-            msg: "Hubo un error creando el producto"
-        })
-        
-    }  
-})
-
-app.put("/actualizar-producto", async(req, res) => {  
-    const { id,producto,marca,coleccion,categoria,color,talla,material,imagen,stock} = req.body
-
-    try {
-        const actualizacionProducto = await Producto.findByIdAndUpdate(id, { producto,marca,coleccion,categoria,color,talla,material,imagen,stock }, { new: true })
-
-        res.json(actualizacionProducto)
-
-    } catch (error) {
-        
-        res.status(500).json({
-            msg: "Hubo un error actualizando el producto"
-        })
-
-    }
-})
-
-app.delete("/borrar-producto", async(req, res) => {   
-    const{id} =req.body
-    try {
-
-        const productoBorrada = await Producto.findByIdAndRemove({_id: id })
-
-        res.json(productoBorrada)
-        
-
-    } catch (error) {
-        res.status(500).json({
-            msg: "Hubo un error borrando el producto especificado"
-        })
-    }
-
-
-})
+app.get("/obtener-compras", obtenerCompras);
 
 // 4. SERVIDOR
 app.listen(process.env.PORT, () => {

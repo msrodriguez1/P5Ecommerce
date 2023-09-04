@@ -69,7 +69,7 @@ return (
       : producto.id === 6
       ? perfume6
       : ''
-  }  style={{ width: '450px', maxHeight: '450px', objectFit: 'cover' }}/>
+  }  style={{ width: '500px', maxHeight: '500px', objectFit: 'cover', marginLeft:'50px'}}/>
         </div>
         <div className="col-md-6">
             <h1 className="title3">{producto.nombre}</h1>

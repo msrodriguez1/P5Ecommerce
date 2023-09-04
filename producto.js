@@ -1,5 +1,5 @@
 // 1. IMPORTACIONES
-import mongoose from 'mongoose';
+const mongoose =require( 'mongoose');
 
 // 2. SCHEMA
 const productSchema = mongoose.Schema({
@@ -22,4 +22,4 @@ const productSchema = mongoose.Schema({
 const Producto = mongoose.model('productos', productSchema)
 
 // 4. EXPORTACIÓN
-export default Producto;
+module.exports =  Producto;

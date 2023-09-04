@@ -3,6 +3,8 @@ import Login from './Login';
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import './Registro.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 
 
 
@@ -24,11 +26,38 @@ const Registro = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    // Aquí podrías hacer una petición a tu API para registrar al usuario
-    // Por ahora, solo vamos a imprimir los datos en la consola
+    try {
+        const response = await fetch('/usuarios.json', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+  
+        if (response.ok) {
+          console.log('Usuario registrado exitosamente');
+          toast('Registro exitoso');
+          navigate('/loginC');
+        } else {
+          console.error('Error al registrar el usuario');
+          toast('Error al intentar registrar usuario');
+
+        }
+      } catch (error) {
+        console.error('Error al registrar el usuario:', error);
+      }
     console.log(formData);
+  };
+
+
+  
+  const botonStyle = {
+    borderRadius: '0', // Bordes rectos
+    fontFamily: 'Courier New, Courier', // Tipografía Courier
+    fontSize: '14px', // Tamaño de fuente ajustado
   };
 
   return (
@@ -50,8 +79,8 @@ const Registro = () => {
         <label>Contraseña</label>
         <input type="password" name="password" value={formData.password} onChange={handleChange} />
       </div>
-      <button type="submit">Registrar</button>
-      <button onClick={() => navigate('/loginC')}>Iniciar sesión</button>
+      <button type="submit" style={botonStyle}>Registrar</button>
+      <button onClick={() => navigate('/loginC')} style={botonStyle}>Iniciar sesión</button>
 
     </form>
   );
