@@ -44,9 +44,9 @@ app.get("/obtener-productos", obtenerProductos);
 // app.post("/crear-productos", crearProducto);
 // app.put("/actualizar-productos", actualizarProducto);
 // app.delete("/borrar-productos", borrarProducto);
-app.post("/usuario/crear", crearUsuario);
-app.post("/usuario/iniciar-sesion", iniciarSesion);
-app.post("/usuario/verificar-usuario", auth, verificarUsuario);
+app.post("/usuario-crear", crearUsuario);
+app.post("/usuario-iniciar-sesion", iniciarSesion);
+app.post("/usuario-verificar-usuario", auth, verificarUsuario);
 
 app.get("/obtener-compras", obtenerCompras);
 

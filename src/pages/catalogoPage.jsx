@@ -17,7 +17,7 @@ export const CatalogoPage = () => {
   useEffect(() => {
     const cargarProductos = async () => {
         try {
-            const respuesta = await fetch('http://localhost:3005/obtener-productos');
+            const respuesta = await fetch('http://localhost:3007/obtener-productos');
             const datos = await respuesta.json();
             setProductos(datos.productos);
             setProductosFiltrados(datos.productos);

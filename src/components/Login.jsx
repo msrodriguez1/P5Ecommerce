@@ -4,6 +4,8 @@ import { useAuth } from "../context/authContexto.jsx";
 import { useNavigate } from "react-router-dom";
 import { Modal, Button } from 'react-bootstrap';
 import Registro from './Registro.jsx';
+import bcryptjs from 'bcryptjs';
+
 // import './Login.css'
 
 
@@ -39,45 +41,37 @@ const Login = () => {
     fontFamily: 'Courier New, Courier', // Tipografía Courier
     fontSize: '14px', // Tamaño de fuente ajustado
   };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsLoading(true);
-  
+
     try {
-      const response = await fetch('/usuarios.json');
-      const data = await response.json();
-      const users = data.usuarios;
-      const user = users.find(user => user.usuario === email && user.password === password);
-              
-      if (user) {
-        const tokenResponse = await fetch('/usuario/verificar-usuario', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email, password }),
+        const response = await fetch('http://localhost:3007/usuario-iniciar-sesion', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
         });
-  
-        if (tokenResponse.ok) {
-          const tokenData = await tokenResponse.json();
-          const token = tokenData.token;
-          // El usuario existe, actualizar el perfil en el contexto
-          setPerfil({ id: user.id, email: user.email });
-          updateToken.updateToken(token); // Corrección aquí
-          console.log("Inicio Exitoso")
-          navigate('/perfil');
+
+        if (response.ok) {
+            const responseData = await response.json();
+            const token = responseData.token;
+
+            setPerfil({ email }); // Solo establece el email en el contexto del perfil
+            updateToken(token);
+            console.log("Inicio Exitoso");
+            navigate('/perfil');
         } else {
-          // El usuario no existe, mostrar un mensaje de error
-          alert('El email o la contraseña son incorrectos.');
+            alert('El email o la contraseña son incorrectos.');
         }
+
         setIsLoading(false);
-      }
     } catch (error) {
-      console.error('Error fetching users:', error);
+        console.error('Error fetching users:', error);
     }
-  };
-  
+};
+
 
   
 

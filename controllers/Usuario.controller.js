@@ -1,4 +1,4 @@
-const Usuario = require('../usuario'); // Asegúrate de importar el modelo de Usuario
+const Usuario = require('../usuario.js'); // Asegúrate de importar el modelo de Usuario
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
@@ -60,58 +60,58 @@ exports.crearUsuario = async (req, res) => {
 
 
 
-exports.iniciarSesion = async (req, res) =>  {
-
-    // OBTENEMOS EL EMAIL Y EL PASSWORD DE LA PETICIÓN
-    const {email, password} = req.body
+exports.iniciarSesion = async (req, res) => {
+    const { email, password } = req.body;
 
     try {
-        // ENCONTRAMOS UN USUARIO
-        let foundUser = await Usuario.findOne({email})
+        console.log('Intento de inicio de sesión para el email:', email);
 
-        // SI NO HUBO UN USUARIO ENCONTRADO, DEVOLVEMOS UN ERROR
-        if(!foundUser){
-            return res.status(400).json({msg: "El usuario no existe"})
+        let foundUser = await Usuario.findOne({ email });
+
+        if (!foundUser) {
+            console.log('Usuario no encontrado.');
+            return res.status(400).json({ msg: "El usuario no existe" });
         }
 
-        // SI TODO OK, HACEMOS LA EVALUACIÓN DE LA CONTRASEÑA ENVIADA CONTRA LA BASE DE DATOS
-        const passCorrecto = await bcryptjs.compare(password, foundUser.password)
-        
-        // SI EL PASSWORD ES INCORRECTO, REGRESAMOS UN MENSAJE SOBRE ESTO
-        if(!passCorrecto){
-            return await res.status(400).json({msg: "Password incorrecto"})
+        const passCorrecto = await bcryptjs.compare(password, foundUser.password);
+
+        if (!passCorrecto) {
+            console.log('Contraseña incorrecta.');
+            return await res.status(400).json({ msg: "Password incorrecto" });
         }
 
-        // SI TODO CORRECTO, GENERAMOS UN JSON WEB TOKEN
-        // 1. DATOS DE ACOMPAÑAMIENTO AL JWT
         const payload = {
             user: {
-                id: foundUser.id
+                id: foundUser._id
             }
         }
 
-        // 2. FIRMA DEL JWT
         jwt.sign(
-            payload, 
-            process.env.SECRET, 
+            payload,
+            process.env.SECRET,
             {
                 expiresIn: 3600000
-            }, 
+            },
             (error, token) => {
-                if(error) throw error;
-                
-                //SI TODO SUCEDIÓ CORRECTAMENTE, RETORNAR EL TOKEN
-                res.json({token})
-        })
-        
+                if (error) {
+                    console.log('Error al generar el token:', error);
+                    throw error;
+                }
+
+                console.log('Inicio de sesión exitoso para el usuario:', foundUser.email);
+                res.json({ token });
+            }
+        );
+
     } catch (error) {
+        console.log('Error al procesar la solicitud de inicio de sesión:', error);
         res.json({
             msg: "Hubo un error",
             error
-        })
+        });
     }
-
 }
+
 
 
 
@@ -119,7 +119,7 @@ exports.verificarUsuario = async (req, res) => {
 
     try {
         // CONFIRMAMOS QUE EL USUARIO EXISTA EN BASE DE DATOS Y RETORNAMOS SUS DATOS, EXCLUYENDO EL PASSWORD
-        const usuario = await Usuario.findById(req.user.id).select('-password')
+        const usuario = await Usuario.findById(req.user._id).select('-password')
         res.json({usuario})
 
     } catch (error) {
