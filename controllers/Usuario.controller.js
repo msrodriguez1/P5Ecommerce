@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 exports.crearUsuario = async (req, res) => {
     // OBTENER USUARIO, EMAIL Y PASSWORD DE LA PETICIÓN
-    const { nombre, apellido, email, password } = req.body;
+    const { nombre, apellido, email,direccion, password } = req.body;
 
     try {
         // GENERAMOS FRAGMENTO ALEATORIO PARA USARSE CON EL PASSWORD
@@ -16,6 +16,7 @@ exports.crearUsuario = async (req, res) => {
             nombre,
             apellido,
             email,
+            direccion,
             password: hashedPassword,
         });
 
@@ -99,7 +100,18 @@ exports.iniciarSesion = async (req, res) => {
                 }
 
                 console.log('Inicio de sesión exitoso para el usuario:', foundUser.email);
-                res.json({ token });
+                res.json({
+                    token,
+                    user: {
+                        _id: foundUser._id,
+                        nombre: foundUser.nombre,
+                        apellido: foundUser.apellido,
+                        email: foundUser.email,
+                        direccion: foundUser.direccion
+
+                        // ... cualquier otra propiedad del usuario que desees enviar
+                    }
+                });
             }
         );
 

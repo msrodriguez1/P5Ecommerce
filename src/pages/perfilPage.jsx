@@ -9,29 +9,30 @@ import Atras from '../components/BotonAtras.jsx'
 const PerfilPage = () => {
   const { perfil } = useContext(PerfilContext);
   const [usuario, setUsuario] = useState(null);
+  console.log({perfil})
 
-  useEffect(() => {
-    const fetchUsuario = async () => {
-      try {
-        const response = await fetch('./usuarios.json');
-        const data = await response.json();
-        const usuarios = data.usuarios;
-        const usuario = usuarios.find(user => user.id === perfil.id);
-        console.log(perfil.id)
-        setUsuario(usuario);
-      } catch (error) {
-        console.error('Error fetching usuario:', error);
-      }
-    };
+//   useEffect(() => {
+//     const fetchUsuario = async () => {
+//       try {
+//         const response = await fetch('./usuarios.json');
+//         const data = await response.json();
+//         const usuarios = data.usuarios;
+//         const usuario = usuarios.find(user => user.email === perfil.email);
+//         console.log(perfil.id)
+//         setUsuario(usuario);
+//       } catch (error) {
+//         console.error('Error fetching usuario:', error);
+//       }
+//     };
 
-    if (perfil) {
-      fetchUsuario();
-    }
-  }, [perfil]);
+//     if (perfil) {
+//       fetchUsuario();
+//     }
+//   }, [perfil]);
 
-  if (!usuario) {
-    return <div>Cargando...</div>;
-  }
+//   if (!usuario) {
+//     return <div>Cargando...</div>;
+//   }
 
   // ...
 
@@ -39,10 +40,10 @@ const PerfilPage = () => {
 <div className="container mt-5 flex-column">
     <div className="perfil mb-5 p-5 bg-light rounded">
         <h2>Mi Perfil</h2>
-        <p><strong>Nombre:</strong> {usuario.nombre}</p>
-        <p><strong>Apellido:</strong> {usuario.apellido}</p>
-        <p><strong>Direccion:</strong> {usuario.direccion}</p>
-        <img src={usuario.imagen} alt={`${usuario.nombre} ${usuario.apellido}`} className="img-fluid rounded" />
+        <p><strong>Nombre:</strong> {perfil.nombre}</p>
+        <p><strong>Apellido:</strong> {perfil.apellido}</p>
+        <p><strong>Direccion:</strong> {perfil.direccion}</p>
+        <img src={perfil._id} alt={`${perfil.nombre} ${perfil.apellido}`} className="img-fluid rounded" />
     </div>
     <div className="historialCompras mb-5 flex-column">
         <HistorialCompras/>

@@ -57,10 +57,12 @@ const Login = () => {
         if (response.ok) {
             const responseData = await response.json();
             const token = responseData.token;
-
-            setPerfil({ email }); // Solo establece el email en el contexto del perfil
+            const { _id, email, nombre, apellido, direccion } = responseData.user;
+            setPerfil({_id, nombre, apellido,direccion,email}); // Solo establece el email en el contexto del perfil
             updateToken(token);
             console.log("Inicio Exitoso");
+            console.log({_id, nombre, apellido,direccion,email});
+
             navigate('/perfil');
         } else {
             alert('El email o la contraseña son incorrectos.');

@@ -15,6 +15,7 @@ const Registro = () => {
     nombre: '',
     apellido: '',
     email: '',
+    direccion: '',
     password: ''
   });
 
@@ -74,6 +75,10 @@ const Registro = () => {
       <div>
         <label>Email</label>
         <input type="email" name="email" value={formData.email} onChange={handleChange} />
+      </div>
+      <div>
+        <label>Direccion</label>
+        <input type="text" name="direccion" value={formData.direccion} onChange={handleChange} />
       </div>
       <div>
         <label>Contraseña</label>

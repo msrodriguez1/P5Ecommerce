@@ -71,9 +71,9 @@ const filtrarProductos = (value) => {
     </div>
     <div className="row">
         {productosFiltrados.map(producto => (
-            <div key={producto.id} className="col-md-4 mb-4">
+            <div key={producto._id} className="col-md-4 mb-4">
                 <div className="card">
-                    <Link to={`/producto/${producto.id}`}>
+                    <Link to={`/producto/${producto._id}`}>
                         <img src={producto.imagen} alt={producto.nombre} className="card-img-top mx-auto d-block" style={{ width: '300px', maxHeight: '300px', objectFit: 'cover' }} />
                     </Link>
                     <div className="card-body text-center">

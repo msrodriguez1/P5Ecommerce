@@ -1,6 +1,6 @@
 const Producto = require('../producto.js');
 
-const obtenerProductos = async (req, res) => {
+exports.obtenerProductos = async (req, res) => {
     try {
         const productos = await Producto.find({});
         res.json({ productos });
@@ -12,10 +12,6 @@ const obtenerProductos = async (req, res) => {
         });
     }
 };
-
-module.exports = {
-    obtenerProductos
-  };
 
 
 
@@ -71,3 +67,19 @@ exports.borrarProducto = async (req, res) => {
 
 }
 
+
+
+
+
+exports.encontrarProducto = async (req, res) => {
+    try {
+        const producto = await Producto.findById(req.params.id);
+        if (producto) {
+            res.json(producto);
+        } else {
+            res.status(404).send('Producto no encontrado');
+        }
+    } catch (error) {
+        res.status(500).json({ msg: "Error al obtener el producto" });
+    }
+};

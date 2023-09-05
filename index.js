@@ -11,7 +11,7 @@ const Usuario =require('./usuario.js');
 const Compra =require( './compras.js');
 
 const connectDB =require( './db.js');
-const{ obtenerProductos } =require( './controllers/Producto.controller.js');
+const{ obtenerProductos, encontrarProducto } =require( './controllers/Producto.controller.js');
 const { obtenerCompras } =require(  './controllers/Compras.controller.js');
 const {crearUsuario, iniciarSesion, verificarUsuario}=require('./controllers/Usuario.controller.js')
 
@@ -40,7 +40,11 @@ try {
 app.use(express.json());
 
 // 3. RUTEO
+console.log(obtenerProductos); // Debería mostrarte [Function]
 app.get("/obtener-productos", obtenerProductos);
+
+console.log(encontrarProducto); // Debería mostrarte [Function]
+app.get("/obtener-producto/:id", encontrarProducto);
 // app.post("/crear-productos", crearProducto);
 // app.put("/actualizar-productos", actualizarProducto);
 // app.delete("/borrar-productos", borrarProducto);

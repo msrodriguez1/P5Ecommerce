@@ -21,18 +21,13 @@ export const ProductPage = () => {
   useEffect(() => {
     const cargarProducto = async () => {
       try {
-        const respuesta = await fetch('http://localhost:3005/obtener-productos');
-                if (!respuesta.ok) {
-          throw new Error('No se pudo cargar el catálogo de productos');
+        const respuesta = await fetch(`http://localhost:3007/obtener-producto/${id}`);
+        console.log(id)
+        if (!respuesta.ok) {
+          throw new Error('No se pudo cargar el producto');
         }
-        const datos = await respuesta.json();
-        const producto = datos.productos.find(p => p.id === parseInt(id));
-
-        if (!producto) {
-          throw new Error('Producto no encontrado');
-        }
+        const producto = await respuesta.json();
         setProducto(producto);
-        console.log(producto.imagen)
       } catch (error) {
         setError(error.message);
       }
@@ -40,6 +35,7 @@ export const ProductPage = () => {
 
     cargarProducto();
   }, [id]);
+
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -57,19 +53,19 @@ return (
         <div className="col-md-6 mb-4">
         <img  src={
     producto.id === 1
-      ? perfume1
-      : producto.id === 2
-      ? perfume2
-      : producto.id === 3
-      ? perfume3
-      : producto.id === 4
-      ? perfume4
-      : producto.id === 5
-      ? perfume5
-      : producto.id === 6
-      ? perfume6
-      : ''
-  }  style={{ width: '500px', maxHeight: '500px', objectFit: 'cover', marginLeft:'50px'}}/>
+    ? perfume1
+    : producto.id === 2
+    ? perfume2
+    : producto.id === 3
+    ? perfume3
+    : producto.id === 4
+    ? perfume4
+    : producto.id === 5
+    ? perfume5
+    : producto.id === 6
+    ? perfume6
+    : ''
+  }  style={{ width: '500px', maxHeight: '500px', objectFit: 'cover', marginLeft:'50px'}}></img>
         </div>
         <div className="col-md-6">
             <h1 className="title3">{producto.nombre}</h1>
@@ -100,3 +96,7 @@ return (
 }
 
 export default ProductPage;
+
+
+
+
