@@ -80,7 +80,7 @@ const Login = () => {
   return (
     <Modal show={mostrarModal} onHide={handleCerrarModal}>
     <Modal.Header closeButton>
-      <Modal.Title>{mostrarRegistro ? 'Registrarse' : 'Iniciar sesión'}</Modal.Title>
+      <Modal.Title className="title1">{mostrarRegistro ? 'Registrarse' : 'Iniciar sesión'}</Modal.Title>
     </Modal.Header>
       <Modal.Body>
         {mostrarRegistro ? (

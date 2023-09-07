@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import './checkoutPage.css'
+import './checkoutPage.css'
 
 const Checkout = () => {
   const [entrega, setEntrega] = useState('');
@@ -15,7 +15,8 @@ const Checkout = () => {
   // ...
 
 return (
-    <div className="container mt-5">
+  <div className="fullPage">
+    <div className="container mt-5 checkout-modal">
       <form onSubmit={handleSubmit} className="p-5 bg-light rounded">
         <h1 className="mb-4 title1">Checkout</h1>
         <div className="form-group mb-3">
@@ -40,6 +41,7 @@ return (
         </div>
         <button type="submit" className="btn btn-outline-secondary btn-block">Continuar</button>
       </form>
+    </div>
     </div>
   );
   

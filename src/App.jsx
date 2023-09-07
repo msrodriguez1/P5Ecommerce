@@ -34,6 +34,8 @@ function App() {
 
   return (
     <>
+     <div className="wrapper">
+      <div className="main-content">
       <PerfilProvider>
       <CartProvider value={{ cart, setCart }}>
 
@@ -41,12 +43,19 @@ function App() {
         <MainRouter />
       <ToastContainer />
       {/* <SubCatalogo products={products} /> */}
-      <Footer />
-
+      <div className="footer">
+<Footer />
+</div>
       </CartProvider>
       </PerfilProvider>
+      </div>
+    </div>
     </>
+
   );
 }
 
 export default App;
+
+
+

@@ -1,3 +1,20 @@
 .title1{
     font-family: 'Courier New', Courier, monospace;
 }
+
+.checkout-modal {
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Puedes añadir otros estilos específicos para otros elementos dentro del modal si es necesario */
+  .checkout-modal h1 {
+    /* estilos específicos para el h1, por ejemplo: */
+    font-size: 24px;
+  }
+
+
+.fullPage{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

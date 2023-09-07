@@ -37,6 +37,7 @@ const PerfilPage = () => {
   // ...
 
   return (
+    <div className="fullPage">
 <div className="container mt-5 flex-column">
     <div className="perfil mb-5 p-5 bg-light rounded">
         <h2>Mi Perfil</h2>
@@ -51,6 +52,7 @@ const PerfilPage = () => {
     <div className="text-center">
         <Atras/>
     </div>
+</div>
 </div>
   );
 

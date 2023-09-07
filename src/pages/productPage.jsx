@@ -51,21 +51,21 @@ return (
 <div className="container-fluid mt-5">
     <div className="row">
         <div className="col-md-6 mb-4">
-        <img  src={
-    producto.id === 1
-    ? perfume1
-    : producto.id === 2
-    ? perfume2
-    : producto.id === 3
-    ? perfume3
-    : producto.id === 4
-    ? perfume4
-    : producto.id === 5
-    ? perfume5
-    : producto.id === 6
-    ? perfume6
-    : ''
-  }  style={{ width: '500px', maxHeight: '500px', objectFit: 'cover', marginLeft:'50px'}}></img>
+        <img  src={ producto.imagen
+    // producto.id === 1
+    // ? perfume1
+    // : producto.id === 2
+    // ? perfume2
+    // : producto.id === 3
+    // ? perfume3
+    // : producto.id === 4
+    // ? perfume4
+    // : producto.id === 5
+    // ? perfume5
+    // : producto.id === 6
+    // ? perfume6
+    // : ''
+  }  style={{ width: '500px', maxHeight: '500px', objectFit: 'cover', marginLeft:'50px'}} alt={producto.imagen}></img>
         </div>
         <div className="col-md-6">
             <h1 className="title3">{producto.nombre}</h1>
