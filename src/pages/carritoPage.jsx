@@ -48,9 +48,6 @@ return (
   fontFamily: 'Courier New, Courier',
   fontSize: '18px' }}>continuar</button>
     </div>
-
-
-      <Atras />
     </div>
   );
   

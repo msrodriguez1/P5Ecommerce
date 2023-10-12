@@ -12,22 +12,8 @@ import { toast } from "react-toastify";
 import SubCatalogo from './components/SubCatalogo';
 import  PerfilProvider from './context/perfilContexto';
 import { CartProvider } from './context/carritoContexto';
+import Atras from './components/BotonAtras'
 
-
-
-
-
-const products = [
-  { id: 1, name: 'Producto 1', imageUrl: 'Atun.jpeg' },
-  { id: 2, name: 'Producto 2', imageUrl: 'imagen2.jpg' },
-  { id: 3, name: 'Producto 3', imageUrl: 'imagen3.jpg' },
-  { id: 4, name: 'Producto 4', imageUrl: 'imagen4.jpg' },
-  { id: 5, name: 'Producto 5', imageUrl: 'imagen5.jpg' },
-  { id: 6, name: 'Producto 6', imageUrl: 'imagen4.jpg' },
-  { id: 7, name: 'Producto 7', imageUrl: 'imagen5.jpg' },
-
-  // Agrega más productos aquí
-];
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -43,6 +29,8 @@ function App() {
         <MainRouter />
       <ToastContainer />
       {/* <SubCatalogo products={products} /> */}
+      {/* Dejar componente atrás acá y fixed */}
+      <Atras/>
       <div className="footer">
 <Footer />
 </div>

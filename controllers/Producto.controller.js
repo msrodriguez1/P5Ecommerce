@@ -68,9 +68,6 @@ exports.borrarProducto = async (req, res) => {
 }
 
 
-
-
-
 exports.encontrarProducto = async (req, res) => {
     try {
         const producto = await Producto.findById(req.params.id);

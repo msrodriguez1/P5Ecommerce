@@ -87,7 +87,6 @@ return (
     </div>
 
 </div>
-    <Atras/>
     </div>
 );
 

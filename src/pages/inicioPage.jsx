@@ -14,7 +14,6 @@ return (
           <Login />
  
         </div>
-        <Atras />
       </div>
     </div>
   );

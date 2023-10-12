@@ -97,7 +97,6 @@ const filtrarProductos = (value) => {
             </div>
         ))}
     </div>
-    <Atras />
 </div>
 
 

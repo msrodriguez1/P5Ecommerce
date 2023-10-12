@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css'; // Puedes incluir un archivo CSS si deseas estilizar el componente
+// import './Footer.css'; // Puedes incluir un archivo CSS si deseas estilizar el componente
 
 export const Footer = () => {
   return (

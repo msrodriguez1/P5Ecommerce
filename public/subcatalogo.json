@@ -1,10 +1,19 @@
 {
     "productos": [
-  
+      {
+        "id": 1,
+        "nombre": "portada1",
+        "imagen": "src/assets/portada1.jpeg"
+      },
       {
         "id": 2,
         "nombre": "portada2",
         "imagen": "src/assets/portada2.jpeg"
+      },
+      {
+        "id": 3,
+        "nombre": "portada3",
+        "imagen": "src/assets/portada5.jpeg"
       }
     ]
   }

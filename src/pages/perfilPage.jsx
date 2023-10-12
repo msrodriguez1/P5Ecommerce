@@ -50,7 +50,6 @@ const PerfilPage = () => {
         <HistorialCompras/>
     </div>
     <div className="text-center">
-        <Atras/>
     </div>
 </div>
 </div>
