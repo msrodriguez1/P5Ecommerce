@@ -4,12 +4,7 @@ import { useParams } from 'react-router-dom';
 import { CartContext } from '../context/carritoContexto';
 import Atras from '../components/BotonAtras.jsx'
 import './productPage.css'
-import perfume1 from '../assets/perfume1.jpeg';
-import perfume2 from '../assets/perfume2.jpeg';
-import perfume3 from '../assets/perfume3.jpeg';
-import perfume4 from '../assets/perfume4.jpeg';
-import perfume5 from '../assets/perfume5.jpeg';
-import perfume6 from '../assets/perfume6.jpeg';
+
 
 export const ProductPage = () => {
 

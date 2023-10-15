@@ -47,7 +47,7 @@ const filtrarProductos = (value) => {
 
     <div>
     {/* <h5 className="titulo">Catálogo de productos</h5> */}
-    <img className="moai" src="src/assets/portada9.jpeg"   style={{ display: 'block', margin: 'auto', maxWidth: '800px', objectFit: 'cover', marginBottom: '30px'}}
+    <img className="moai" src="/assets/portada9.jpeg"   style={{ display: 'block', margin: 'auto', maxWidth: '800px', objectFit: 'cover', marginBottom: '30px'}}
 ></img>
     <div className="row mb-4">
         <div className="col-12 col-md-4">
