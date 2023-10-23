@@ -30,7 +30,7 @@ const Registro = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     try {
-        const response = await fetch('http://localhost:3008/usuario-crear', {
+        const response = await fetch('https://backecommerce-08vj.onrender.com/usuario-crear', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

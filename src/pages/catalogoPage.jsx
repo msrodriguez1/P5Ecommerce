@@ -17,7 +17,7 @@ export const CatalogoPage = () => {
   useEffect(() => {
     const cargarProductos = async () => {
         try {
-            const respuesta = await fetch('http://localhost:3008/obtener-productos');
+            const respuesta = await fetch('https://backecommerce-08vj.onrender.com/obtener-productos');
             const datos = await respuesta.json();
             console.log(datos)
             setProductos(datos.productos);
