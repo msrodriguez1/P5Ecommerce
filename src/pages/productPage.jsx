@@ -16,7 +16,7 @@ export const ProductPage = () => {
   useEffect(() => {
     const cargarProducto = async () => {
       try {
-        const respuesta = await fetch(`http://localhost:3007/obtener-producto/${id}`);
+        const respuesta = await fetch(`http://localhost:3008/obtener-producto/${id}`);
         console.log(id)
         if (!respuesta.ok) {
           throw new Error('No se pudo cargar el producto');

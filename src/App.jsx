@@ -4,7 +4,7 @@ import { NavBar } from "./components/Navbar";
 import  {Footer}  from "./components/Footer_com";
 import { MainRouter } from "../routes/MainRouter";
 // import './App.css'
-import {db} from './firebase/firebase'
+// import {db} from './firebase/firebase'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 // import { ToastContainer } from 'react-toastify';

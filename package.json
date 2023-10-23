@@ -2,7 +2,6 @@
   "name": "awesome-app",
   "private": true,
   "version": "0.0.0",
-  "type": "commonjs",
   "homepage": "http://msrodriguez1.github.io/P4RestaurantApp",
   "scripts": {
     "dev": "vite",
